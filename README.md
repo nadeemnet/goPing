@@ -1,6 +1,6 @@
 ## Ultra fast ping over the range of IP addresses
 
-It takes `baseIP` as the starting point for the IP addresses to ping, `range` parameter is used to tell how many IP addresses should be pinged. Also `pauseAfter` paramter can be used to add delay in ping after nth packet. By default ping timeout is set to 1000 msec.
+It takes `baseIP` as the starting point for the IP addresses to ping, `range` parameter is used to tell how many IP addresses should be pinged. Also `pauseAfter` paramter can be used to add delay in ping after nth packet. By default one ICMP packet with timeout=1000 msec is sent for every IP address.
 The results are available in a second, and you can ping milions of IP addresses. When pinging on Linux machine you need this command
 `sudo sysctl -w net.ipv4.ping_group_range="0 2147483647"`. Testing on macOS did not require this command.
 
